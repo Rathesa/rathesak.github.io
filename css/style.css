@@ -91,4 +91,6 @@ nav ul a {
     padding: 0px 15px;
 }
 
-/* ... (other styles remain unchanged) */
+.cd-headline.type .cd-words-wrapper.selected b {
+    color: #eccb99;
+}

@@ -44,9 +44,6 @@ h6 {
     color: #eccb99
 }
 
-skill-badge {
-    text-align: center;
-}
     </style>
 </head>
 
@@ -276,7 +273,7 @@ skill-badge {
                 const level = this.getAttribute('data-level') || 'Level not provided';
 
                 this.innerHTML = `
-                    <div style="display: inline-block; background-color: #4CAF50; color: white; padding: 5px 10px; margin: 5px; border-radius: 10px;">
+                    <div style="display: inline-block; background-color: #4CAF50; color: white; padding: 5px 10px; margin: 5px; border-radius: 10px;text-align: center;">
                         ${skill} - ${level}
                     </div>
                 `;

@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45546538-4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -22,11 +21,11 @@
 
     <style>
         .default_color {
-             background-color: #d9ae6d !important; /* green*/
+             background-color: #d9ae6d !important;
         }
 
         .default_color_text {
-            color: #a0522d !important; /* Brown */
+            color: #a0522d !important; 
         }
 
      #index-banner {
@@ -78,6 +77,7 @@
                         <a href="#" data-activates="nav-mobile" class="button-collapse"><i
                                 class="mdi-navigation-menu"></i></a>
                     </div>
+                    
                 </div>
             </nav>
         </div>
@@ -94,6 +94,7 @@
                         <b> of design and innovation. </b>
                         
                     </span>
+                    
                 </h1>
             </div>
         </section>
@@ -106,6 +107,14 @@
                         <h2 class="center header text_h2"> Hi There! I'm Rathesa Kodeeswaran. A
                             <span class="span_h2"> UX student </span> at Wilfird Laurier University. <span
                                 class="span_h2"> </span> </h2>
+
+                                <!-- Customer Element Skill badges-->
+
+                                 <skill-badge data-skill="User Research" data-level="Advanced"></skill-badge>
+    <skill-badge data-skill="Wireframing" data-level="Intermediate"></skill-badge>
+    <skill-badge data-skill="Prototyping" data-level="Intermediate"></skill-badge>
+    <skill-badge data-skill="Storytelling" data-level="Intermediate"></skill-badge>
+
                   
                 </div>
             </div>
@@ -169,6 +178,8 @@
                                 <input id="icon_prefix" name="name" type="text" class="validate white-text">
                                 <label for="icon_prefix" class="white-text">First Name</label>
                             </div>
+
+                            
                             <div class="input-field col s6">
                                 <i class="mdi-communication-email prefix white-text"></i>
                                 <input id="icon_email" name="email" type="email" class="validate white-text">
@@ -209,12 +220,49 @@
         <div class="footer-copyright default_color">
             
         </div>
+        <!-- Custom Element Example -->
+         <quote-box data-quote="Good design is obvious. Great design is transparent."
+        data-author="Joe Sparano"></quote-box>
+
         &copy Rathesa Kodeeswaran 2023
     </footer>
 
     <!--  Scripts-->
     <script src="min/plugin-min.js"></script>
     <script src="min/custom-min.js"></script>
+      <script>
+        class QuoteBox extends HTMLElement {
+            connectedCallback() {
+                const quote = this.getAttribute('data-quote') || 'No quote provided';
+                const author = this.getAttribute('data-author') || 'Unknown';
+
+                this.innerHTML = `
+                    <div style="border: 2px solid #2196F3; padding: 10px; margin: 10px;">
+                        <blockquote style="font-style: italic;">${quote}</blockquote>
+                        <p style="text-align: right; margin: 0;">— ${author}</p>
+                    </div>
+                `;
+            }
+        }
+
+        customElements.define('quote-box', QuoteBox);
+    </script>
+       <script>
+        class SkillBadge extends HTMLElement {
+            connectedCallback() {
+                const skill = this.getAttribute('data-skill') || 'Skill not provided';
+                const level = this.getAttribute('data-level') || 'Level not provided';
+
+                this.innerHTML = `
+                    <div style="display: inline-block; background-color: #4CAF50; color: white; padding: 5px 10px; margin: 5px; border-radius: 10px;">
+                        ${skill} - ${level}
+                    </div>
+                `;
+            }
+        }
+
+        customElements.define('skill-badge', SkillBadge);
+    </script>
 
 </body>
 

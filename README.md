@@ -3,7 +3,7 @@
 <a href="http://rhildred.github.io/CP202Assignment5" target="_blank">View Demo</a>
 <br/>
 
-[edit here](https://diy-pwa.dev/~/gh/rathesa/rathesak.github.io) 
+[edit here](https://diy-pwa.dev/~/gh/rathesa/UX201Portfolio.github.io) 
 
 ## Video Describing A possible workflow for getting this on your own gh-pages.
 
